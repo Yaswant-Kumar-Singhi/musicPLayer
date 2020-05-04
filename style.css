@@ -1,0 +1,1413 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color:rgb(32, 29, 53);
+    font-family: 'Play', sans-serif;
+   
+}
+
+/*------------------Nav Section Styling-----------------*/
+.container{
+	width:98vw;
+    --height:100vh;
+    display: grid;
+    margin: 3px;
+    
+}
+
+.divider{
+	display:grid;
+    grid-template-columns:auto auto auto auto auto;
+    grid-column-gap:0px;
+    width: auto;
+    border: 2.5px solid rgb(14, 15, 15);
+    overflow: hidden;
+    
+    
+}
+
+.logo{
+	width:100%;
+    height:100%;
+    background-color:rgb(0,0,20);   
+}
+
+.logo-box {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /*margin-right: 20px;*/
+    background-color: transparent;
+      
+  }
+  .logo-box a {
+    outline: none;
+    display: block;
+    background-color: transparent;
+  }
+
+  .logo-box img {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      width:100%;
+      height:100%;
+      background-color: transparent;
+}
+
+.favoriteSection{
+    background-color: rgb(0,0,25);
+    display: flex;
+    align-items: center;
+}
+
+.favoriteSection a,h4{
+    color: aliceblue;
+    background-color: rgb(0,0,25);
+    font-size: 20px;
+}
+  
+
+.search{
+	width:auto;
+    height:auto;
+    /*background-color:lightgray;*/
+   
+    
+}
+
+.bell{
+	width:auto;
+    height:auto;
+    display: grid;
+    justify-content: flex-end;
+    position: relative;
+    background-color:rgb(0,0,25);
+    padding-right: 1em;
+    
+}
+
+.bell a{
+	width:auto;
+    height:auto;
+    display: grid;
+    justify-content: flex-end;
+    background-color:rgb(0,0,25);
+    
+} 
+
+/*
+.icon{
+	width:auto;
+    height:auto;
+    background-color:lightgreen;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}*/
+
+
+
+.Search_Box{
+    width: auto;
+    /*border: 1px solid red;*/
+    display: flex;
+     
+    border-radius: 3px;
+    position: relative;
+    top:15%;
+   
+}
+
+.Search_Box input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 14px;
+  border: none;
+ 
+}
+
+.Search_Box button {
+  float:right;
+  justify-content: flex-end;
+  /*padding: 6px 10px;*/
+  padding-left: 9em;
+  color: aliceblue;
+  margin-top: 5px;
+  --margin-right: ;
+  /*background: #ddd;*/
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(0,0,35);
+    
+  }
+  
+
+.buttonUserName{
+    background-color: transparent;
+    
+}
+
+.imageLogo{
+    background-color: rgb(0,0,35);
+    
+}
+
+.imageLogo img{
+    width: auto;
+    max-height: 7vh;
+    border-radius: 50%;
+    position: relative;
+    top:10%;
+}
+  /* Style the dropdown button to fit inside the topnav */
+  .dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: linen;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a dark background on topnav links and the dropdown button on hover */
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: none;
+    color: white;
+  }
+  
+  /* Add a grey background to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Show the dropdown menu when the user moves the mouse over the dropdown button */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /*------------------Nav Section Styling Ends Here------------*/
+
+/*-------------Queue Container Strats here-------------------*/
+
+.queueContainer{
+    width: 96vw;
+    height: 10vh;
+    
+}
+
+.queueBox{
+    display: none;
+   
+}
+
+
+ input {
+      position: absolute;
+      opacity: 0;
+       
+    }
+    
+    /*providing a box shadow to the box*/
+    .open_multiple {
+      
+      overflow: hidden;
+      box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 1);
+      
+    }
+    
+    .item_list {
+      width: auto;
+      color: white;
+      overflow: hidden;/*prevents scrollbar for appearing*/
+    }
+    
+    
+
+	.items {
+      display: flex;
+      justify-content: space-between; /*Items are positioned with space between the lines*/
+      padding: 0.5em; /*have a padding of 1em on all four sides*/
+      background: purple;
+      font-weight: bold;
+      cursor: pointer;/*to give a pointer effect*/
+    }
+
+    /*This will work when we bring mouse over the items*/
+    .items:hover {
+      background: purple;
+      opacity:0.8;
+    }
+    
+
+    .items::after { /*creates a pseudo-element that is the last child of the selected element*/
+      content: "\276F";
+      width: 1em;
+      height: 1em;
+      text-align: center;
+     
+    }
+    
+    /*style for the content inside the accrodian*/
+
+    .description{
+      max-height: 0;
+      padding: 0 1em;
+      color: black;
+      background: white;
+      opacity:0.7;
+      transition: all 0.35s;
+    }
+    
+.description:hover{
+    cursor: pointer;
+}
+
+	
+    input:checked + .items {
+      opacity:0.8;
+    }
+    input:checked + .items::after {
+      transform: rotate(90deg);
+      
+    }
+    input:checked ~ .description {
+      max-height: 10vh;
+      padding: 1em;
+    }
+
+/*-------------Queue Container Ends here-------------------*/
+
+/*----Main Section which is divided in to 2parts ---------*/
+
+
+/*------LEFT SIDE SECTION STYLING STARTS HERE -----------*/
+
+/*-------------TOP BEST CONTAINER STYLING STARTS HERE-------*/
+  main{
+      width: 98vw;
+      height: auto;
+      display: grid;
+      grid-template-columns: 75% 25%;
+      grid-column-gap: 3px;
+      margin-top: 3px;
+      /*border: 3px solid brown;*/
+  }
+
+  .bestContainer{
+    width:73vh;
+    height:35vh;  
+    margin-top: 3px;
+    margin-left: 3px;
+    display: grid;
+    grid-template-rows: 10% auto;
+  }
+
+   .title h3{
+      color:white;
+  }
+
+.best{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 10px;
+    margin: 10px 10px;
+    
+}
+
+.best:hover{
+    cursor: pointer;   
+    
+}
+
+ .firstBest{
+     width: 100%;
+     height: 100%;
+    /*background-color: aliceblue;    
+     background-image: url(images/firstBest.jpg);*/
+     background-repeat: no-repeat;
+     
+     
+}
+
+.firstBest img{
+    width: 320px;
+    height: auto;
+}
+
+.firstBest:hover{
+    transition: 0.2s ease-out linear;
+    transform: scale(1.05);
+      
+    
+}
+
+ .secondBest{
+    width: auto;
+    height: auto;
+    /*background-color: aliceblue;    
+     background-image: url(images/secondBest.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;*/
+}
+
+.secondBest img{
+    width: 320px;
+}
+
+.secondBest:hover{
+    transition: 0.2s ease-out linear;
+    transform: scale(1.05);
+    
+    
+}
+
+ .thirdBest{
+    width: auto;
+    height: auto;
+    /*background-color: aliceblue;    
+     background-image: url(images/thirdBest.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;*/
+}
+
+.thirdBest img{
+    width: 320px;
+}
+.thirdBest:hover{
+    transition: 0.2s ease-out linear;
+    transform: scale(1.05);
+    
+    
+}
+/*-------------Best Section ends here-----------------*/
+
+/*---------Latest Release Section Starts Here----------------*/
+.LatestRelease{
+    margin: 5px;
+    width: auto;
+    height: auto;
+    
+}
+.LatestReleaseContainer{
+    display: grid;
+    grid-template-rows: 50% auto;
+    grid-template-columns: 50% auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    margin:1em;
+    height: 35vh;
+}
+
+.latest{
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-column-gap:1px;
+    background-color: transparent;
+    
+}
+
+.latest .latesetimg{ 
+    background-image: url(images/latestLogo.jpg);
+    background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.latest .latesetimg:hover{ 
+   cursor: pointer;
+}
+
+.latest .latesetcontent{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.latest .latesetcontent h3{
+    /*background-color: moccasin*/
+    color: azure;
+     
+}
+
+.latest .latesetcontent h5{
+    /*background-color: moccasin*/
+    color: lightgray;
+    
+}
+.latest .latesetmenu 
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  float: left;
+}
+
+/*---------Latest Release Section Ends Here----------------*/
+
+/*------------Artist Sextion Strats here----------------*/
+.popularArtist{
+    margin: 5px;
+    width: auto;
+    height: auto;
+    margin-bottom: 5px;
+    
+}
+
+.popularArtistContainer{
+    display: grid;
+    margin:1em;
+    height: 25vh;
+    width: auto;
+    grid-template-columns: auto auto auto auto auto auto ;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+     
+}
+
+.artistbox1,.artistbox2,.artistbox3,.artistbox4,.artistbox5,.artistbox6{
+    display: grid;
+    grid-template-rows: 90% auto ;
+    grid-row-gap: 2px;
+    justify-content: center;
+}
+
+
+
+.artistimage img{
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+ .artistname{
+    text-align: center;
+    color: aliceblue;
+    width: auto;
+    height: auto;
+
+}
+
+
+.artistimage img:hover{
+    border:2px solid rgb(0,0,75);
+    box-shadow: 0 2px 2px 0 rgb(255,255,255);
+}
+
+/*
+figure img{
+    width: 150px;
+    height: 50%;
+    border-radius: 50%;
+    background-size: contain;
+}
+*/
+/*------------Artist Sextion ends here----------------*/
+
+/*--------------Radio container Strats--------------------*/
+
+.radioContainer{
+    margin: 3em 2em 3em 2em;
+    height: 25vh;
+    width: 73vw;
+     
+    
+}
+
+.radioBox{
+    margin-top: 10px;
+    padding: 5px;
+    height: 15vh;
+    width: auto;
+    position: absolute;
+    
+    
+}
+
+.subsection{
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    justify-content: space-around;
+    background-color: transparent;
+    padding-top: 0.5em;
+    
+    
+}
+
+
+.radioStationList{
+    display: block;
+    background-color: transparent;
+    width: auto;
+    height: 20vh;
+}
+
+.radioStationList:hover{
+    transform: rotate(-90deg);
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.loveStation{
+    background-color: transparent;
+    width: auto;
+    height: 18vh;
+}
+
+.loveStation:hover{
+    transform: rotate(-180deg);
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.retroStation{
+    background-color: transparent;
+    width: auto;
+    height: 18vh;
+}
+
+.retroStation:hover{
+     transform: rotate(90deg);
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.chillStationList{
+    background-color: transparent;
+    width: auto;
+    height: 18vh;
+}
+
+.chillStationList:hover{
+     transform: rotate(-20deg);
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.workoutStationList{
+    background-color: transparent;
+    width: auto;
+    height: 18vh;
+}
+
+.workoutStationList:hover{
+     transform: rotate(-90deg);
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.rockStationList{
+    background-color: transparent;
+    width: auto;
+    height: 18vh;
+}
+
+.rockStationList:hover{
+    transform: rotate(-180deg);
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.popStationList{
+    background-color: transparent;
+    width: auto;
+    height: 18vh;
+}
+
+.popStationList:hover{
+    transform: rotate(90deg);
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+
+/*--------------Radio container Ends--------------------*/
+
+/*---------Collection container starts here-------------*/
+
+.collection{
+    width: auto;
+    height:30vh;    
+}
+
+.collectionContainer{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 4px;   
+    margin: 1em;
+}
+
+.partyCollection1 img , .partyCollection2 img , .partyCollection3 img{
+    width: auto;
+    height: auto;
+    background-size: cover;
+    position: relative;
+     
+}
+
+.overlay{
+    position:sticky;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: auto;
+    transition: 0s ease;
+    opacity: 0;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.partyCollection1:hover , .partyCollection2:hover , .partyCollection3:hover {
+    transform: scale(1.05);
+    
+    
+}
+.partyCollection1:hover .overlay , .partyCollection2:hover .overlay , .partyCollection3:hover .overlay{
+    opacity: 1;
+    
+}
+
+
+/*---------Collection container ends here*/
+
+/*--------------English Section Starts here-----*/
+
+.popularEnglish{
+    margin: 5px;
+    width: auto;
+    height: auto;
+    margin-bottom: 5px;
+    
+}
+
+.popularEnglishContainer{
+    display: grid;
+    margin:1em;
+    height: 25vh;
+    width: auto;
+    grid-template-columns: auto auto auto auto auto auto ;
+    grid-column-gap: 8px;
+    grid-row-gap: 4px;
+     
+}
+
+.englishbox1 , .englishbox2 , .englishbox3 , .englishbox4 , .englishbox5 , .englishbox6 {
+    display: grid;
+    grid-template-rows: 90% auto ;
+    grid-row-gap: 2px;
+    justify-content: center;
+}
+
+
+
+.englsihimage img{
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.englsihimage img:hover{
+    border: 1px solid white;
+    box-shadow: 0 2px 2px 0 rgb(0,0,30);
+    cursor: pointer;
+}
+
+.engname{
+    text-align: center;
+    color: aliceblue;
+    width: auto;
+    height: auto;
+
+}
+
+.engname h6{
+    text-align: center;
+    color: lightgray;
+    width: auto;
+    height: auto;
+
+}
+
+/*--------------English Section Ends here-----*/
+
+
+/*------------Hindi Section Starts Here--------*/
+
+.popularHindi{
+    margin-top:4em;
+    width: auto;
+    height: auto;
+    margin-left: 5px;
+     
+    
+}
+
+.popularHindiContainer{
+    display: grid;
+    margin:1em;
+    height: 25vh;
+    width: auto;
+    grid-template-columns: auto auto auto auto auto auto ;
+    grid-column-gap: 8px;
+    grid-row-gap: 4px;
+     
+}
+
+.Hindibox1 , .Hindibox2 , .Hindibox3 , .Hindibox4 , .Hindibox5 , .Hindibox6{
+    display: grid;
+    grid-template-rows: 90% auto ;
+    grid-row-gap: 2px;
+    justify-content: center;
+}
+
+
+
+.hindiimage img{
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.hindiimage img:hover{
+    border: 1px solid white;
+    box-shadow: 0 2px 2px 0 rgb(0,0,30);
+    cursor: pointer;
+}
+
+.hindiname{
+    text-align: center;
+    color: aliceblue;
+    width: auto;
+    height: auto;
+
+}
+
+ .hindiname h6{
+    text-align: center;
+    color: lightgray;
+    width: auto;
+    height: auto;
+
+}
+
+
+/*------------Hindi Section Ends Here--------*/
+
+/*---------------END OF LEFT SECTION----------------*/
+
+/*-----------RIGHT SECTION QUEUE STARTS HERE ---------*/
+  .rightside{
+      height: 75vh;
+      width: auto 
+          
+  }
+
+.queueContainer{
+    margin: 1em;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-row-gap: 2px;
+    height: auto;
+    width: auto;
+    
+}
+
+.songqueue{
+    display: grid;
+    grid-template-columns: 10% 20% 40% auto;
+    grid-column-gap: 1px;
+    width: auto;
+    height: 10vh;
+}
+
+#numberCount{
+    width: auto;
+    height: auto;
+    background-color:rgb(0,0,35);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+#songImage{
+    display: flex;
+    align-items: center;
+    background-color:rgb(0,0,35);
+}
+
+#songImage img{
+    width: auto;
+    max-height: 8vh;
+    margin-left: 4px;
+    }
+
+#songImage img:hover ,#songImage:hover{
+    cursor: pointer;
+    background-color: blueviolet;
+}
+
+#songcontent{
+    background-color:rgb(0,0,35);
+    opacity: inherit;
+}
+
+#songcontent h4{
+    background-color:transparent;
+    color: whitesmoke;
+    font-weight: 100;
+    display: grid;
+    align-items: center;
+    text-align: left;
+    margin:5px 0 0 5px;
+    font-size: 12px;
+}
+
+#songcontent h6{
+    color: gray;
+    font-weight: 100;
+    display: grid;
+    align-items: center;
+    text-align: left;
+    margin:5px 0 0 5px;
+    
+}
+#songbutton{
+    background-color:rgb(0,0,35);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto;
+}
+
+
+
+.button.play {
+  width: 1.5vw;
+  max-height: 3vh;
+  border-style: solid;
+  border-width: 7px 0px 10px 14px;
+  box-sizing: border-box;
+  border-color: rgb(0,0,35) rgb(0,0,35) rgb(0,0,35)whitesmoke;
+  
+}
+
+.button.play:hover{
+    cursor: pointer;
+}
+
+.button.pause {
+  
+  width: 2vw;
+  height: 2.5vh;
+  border-style: double;
+  border-width: 0px 0px 0px 8px;
+  background-color: rgb(0,0,35);
+  border-color:aliceblue;
+}
+
+.button.pause:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+/*-------------------------Footer section------------*/
+
+footer{
+    margin-top: 4em;
+    width: auto;
+    height: 8vh;
+    
+}
+
+.footerContainer{
+    display: grid;
+    grid-template-columns: 25% 50% auto;
+     
+}
+
+.songDetails{
+    background-color: rgb(0,0,25);
+    border-color:rgb(0,0,0);
+    width:auto;
+    height: 8vh;
+    display: grid;
+    grid-template-columns: 30% auto;    
+}
+.songimage{
+    background-color: transparent;
+}
+
+.songimage img{
+    width:3em;
+    height: auto;
+    margin-left: 1em;
+    position: relative;
+    top: -20%;
+}
+
+.songContentDetails{
+    background-color: transparent;
+}
+
+.songContentDetails h4,h6{
+    background-color: transparent;
+    color: aliceblue;
+}
+
+.playingDetails{
+    background-color: rgb(0,0,35);
+    width: auto;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.controlSong{
+    background-color: rgb(0,0,25);
+}
+
+/*
+.content {
+    font-size: 17px;
+    color: white;
+    margin-left: 20px;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+*/
+
+
+.rangeslider{ 
+    width: 50%; 
+    position: relative;
+    top: 30%;
+    left:20%;
+} 
+  
+.myslider { 
+    -webkit-appearance: none; 
+    background: #FCF3CF  ; 
+    width: 100%; 
+    height: 20px; 
+    opacity: 2; 
+   } 
+  
+  
+.myslider::-webkit-slider-thumb { 
+    -webkit-appearance: none; 
+    cursor: pointer; 
+    background: #34495E  ; 
+    width: 8%; 
+    height: 20px; 
+} 
+  
+  
+.myslider:hover { 
+    opacity: 1; 
+} 
+
+
+.fa-forward {
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.fa-play {
+    color: aliceblue;
+    background-color: transparent;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+
+.fa-random {
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.fa-redo {
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.fa-share-alt {
+    color: aliceblue;
+    background-color: transparent;  
+    cursor: pointer;
+}
+
+.fa-volume-up {
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+/*End of Footer Section*/
+
+/*-----------------------------------------------*/
+
+/*-----Resposiveness Section Starts Here -----------*/
+
+@media screen and (max-width: 1340px) {
+    best{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width: auto;
+    }
+    
+    .firstBest img, .secondBest img , .thirdBest img{
+        width: 300px;
+        height: auto;
+    }
+}
+
+
+
+
+ @media screen and (max-width: 1280px) {
+     
+     .Search_Box{
+          width: 80%;
+      }
+     
+    .rightside .title , .queueContainer  {
+      visibility: hidden;  
+    }
+     
+     .latesetcontent h3,h5{
+         font-size: 12px;
+     }
+     
+     .best {
+         display: grid;
+         grid-template-columns: auto auto auto;
+         width: 98vw;
+         margin: 1em;
+     }
+     
+     .rightside{
+         display: none;
+     }
+     
+     .LatestRelease , .popularArtist{
+         margin: 1em;
+     }
+     
+     .LatestReleaseContainer {
+         display: grid;
+         grid-template-columns: auto auto auto auto;
+         width: 97vw;
+         margin: 0.5em 0 0.5em 0;
+     }
+     
+    
+     
+     .popularArtistContainer{
+          display: grid;
+         grid-template-columns: auto auto auto auto auto auto;
+         width: 97vw;
+         margin: 0.5em 0 1em 0;
+         
+     }
+     
+     .subsection{
+         display: grid;
+         grid-template-columns: auto auto auto auto auto auto auto;
+         grid-column-gap: 2px;
+         width: 96vw;
+         justify-content: center;
+         align-items: center;
+         margin: 0.5em 0 0.5em 0;
+     }
+     
+    .collectionContainer{
+         display: grid;
+         grid-template-columns: auto auto auto;
+         margin-left: 4em;
+         width:96vw; 
+         margin: 0.5em 0 0.5em 0.3em;
+     }
+    
+     .popularEnglishContainer{
+         display: grid;
+         grid-template-columns: auto auto auto auto auto auto;
+         margin-left: 4em;
+         width:96vw; 
+         margin: 0.5em 0 0.5em 0.3em;
+     }
+
+     .popularHindiContainer{
+         display: grid;
+         grid-template-columns: auto auto auto auto auto auto;
+         margin-left: 4em;
+         width:96vw; 
+          margin: 0.5em 0 0.5em 0.3em;
+         
+     }
+     
+     .queueBox{
+         visibility: visible;
+         display: block;
+     }
+     
+     
+  }
+
+
+
+
+@media screen and (max-width: 950px){
+    
+    .best {
+         display: grid;
+         grid-template-columns: auto auto auto;
+         width: 100%;
+         margin: 0.5em 0 0.5em 0;
+     }
+    
+    .firstBest img , .secondBest img ,.thirdBest img ,.partyCollection1 img , .partyCollection2 img , .partyCollection3 img{
+        width: 280px;
+    }
+    
+    
+    .artistbox6, .englishbox6 , .Hindibox6, .songContentDetails , .popStationList{
+        display: none;
+    }
+    
+    .subsection{
+         display: grid;
+         grid-template-columns: auto auto auto auto auto auto;
+         grid-column-gap: 2px;
+         width: 96vw;
+         justify-content: center;
+         align-items: center;
+         margin: 0;
+     }
+    
+    .collectionContainer{
+         display: grid;
+         grid-template-columns: auto auto auto;
+         width:auto; 
+         margin: 0.5em 0 0.5em 0.3em;
+     }  
+}
+
+
+@media screen and (max-width: 880px){
+    
+    .best {
+         display: grid;
+         grid-template-columns: auto auto auto;
+         width: 100%;
+         margin: 0.5em 0 0.5em 0;
+     }
+    
+    .LatestReleaseContainer {
+         display: grid;
+         grid-template-columns: auto auto ;
+         grid-column-gap:4em;
+         width: 98vw;
+         margin: 2em;
+     }
+    
+     .subsection{
+         display: grid;
+         grid-template-columns: auto auto auto auto auto auto;
+         grid-column-gap: 2px;
+         width: 80vw;
+         justify-content: center;
+         align-items: center;
+         margin: 0;
+     }
+    
+    .popularEnglishContainer{
+         display: grid;
+         grid-template-columns: auto auto auto auto;
+         margin-left: 4em;
+         width:96vw; 
+         margin: 1em 0 0.5em 0.3em;
+     }
+
+    .popularHindiContainer{
+         display: grid;
+         grid-template-columns: auto auto auto auto ;
+         margin-left: 4em;
+         width:96vw; 
+          margin: 0.5em 0 0.5em 0.3em;
+         
+     }
+    
+    .firstBest img , .secondBest img ,.thirdBest img ,.partyCollection1 img , .partyCollection2 img , .partyCollection3 img{
+        width: 270px;
+    }
+    
+    
+    .artistbox5, .englishbox5 , .Hindibox5, .songContentDetails , .rockStationList{
+        display: none;
+    }
+    
+   
+} 
+
+
+@media screen and (max-width: 850px){
+    
+     .best {
+         display: grid;
+         grid-template-columns: auto auto auto;
+         width: 100%;
+         margin: 0.5em 0 0.5em 0;
+     }
+    
+    .LatestReleaseContainer {
+         display: grid;
+         grid-template-columns: auto auto ;
+         width: 98vw;
+         margin: 0.5em 0 0.5em 0;
+     }
+    
+     .subsection{
+         display: grid;
+         grid-template-columns: auto auto auto auto auto auto;
+         grid-column-gap: 2px;
+         width: 80vw;
+         justify-content: center;
+         align-items: center;
+         margin: 0;
+     }
+    
+    .firstBest img , .secondBest img ,.thirdBest img ,.partyCollection1 img , .partyCollection2 img , .partyCollection3 img{
+        width: 250px;
+    }
+    
+    
+    
+} 
+
+@media screen and (max-width: 800px){
+    
+    .best {
+         display: grid;
+         grid-template-columns: auto auto;
+         width: 100%;
+         margin: 0.5em 0 0.5em 0;
+     }
+    
+    .collectionContainer{
+         display: grid;
+         grid-template-columns: auto auto ;
+         width:auto; 
+         margin: 0.5em 0 0.5em 0.3em;
+     }  
+    
+    
+    .firstBest img , .secondBest img , .partyCollection1 img , .partyCollection2 img {
+        width: 350px;
+    }
+    
+    .bestContainer , .LatestRelease , .popularArtist ,.collection{
+        margin: 1em;
+    }
+    
+    .songContentDetails ,.thirdBest img , .partyCollection3 img{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 700px){
+    
+    .firstBest img , .secondBest img ,.partyCollection1 img , .partyCollection2 img  {
+        width: 300px;
+    }
+    
+     .englishbox4 , .Hindibox4, .songContentDetails , .rockStationList{
+        display: none;
+    }
+    
+    
+}
+
+@media screen and (max-width: 600px){
+    
+    .firstBest img , .secondBest img ,.partyCollection1 img , .partyCollection2 img  {
+        width: 250px;
+    }
+    
+      .songContentDetails , .workoutStationList{
+        display: none;
+    }
+    
+    
+}
+
+@media screen and (max-width: 580px){
+    
+    .firstBest img , .secondBest img ,.partyCollection1 img , .partyCollection2 img  {
+        width: 230px;
+    }
+    
+     .artistbox3, .englishbox3 , .Hindibox3, .songContentDetails , .chillStationList , .latesetcontent h3 ,.latesetmenu{
+        display: none;
+    }
+    
+}
+

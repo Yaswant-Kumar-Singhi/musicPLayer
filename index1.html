@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewreport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://html5book.ru/wp-content/uploads/2015/01/logo-header.png" type="image/gif" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Play&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Header Section will contain the nav bar which is divided into four parts using grid - company logo, searchbar,
+        notification icon and user-logo. User logo in turn is divided into different sections like my-profile, 
+        news, my-fav-list-->
+    <header>
+        <div class="container">
+            <div class="divider">
+                <div class="logo">
+                    <div class="logo-box">
+                        <a href="./index1.html">
+                            <img src="https://html5book.ru/wp-content/uploads/2015/01/logo-header.png" alt="CompanyLogo">
+                        </a>
+
+                    </div>
+                </div>
+                <div class="favoriteSection">
+                    <a href="" style="text-decoration: none">
+                        <h4>Favorite</h4>
+                    </a>
+
+                </div>
+                <div class="search">
+                    <div class="Search_Box">
+                        <input type="text" placeholder="Search" name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+
+                </div>
+                <div class="bell">
+                    <a href="#">
+                        <i class="fa fa-bell" style="font-size:30px; background-color:rgb(0,0,25);top:20%"></i>
+                    </a>
+                </div>
+
+                <!--<div class="icon">-->
+
+
+                <div class="dropdown">
+                    <div class="buttonUserName">
+                        <button class="dropbtn">
+                            <!--<i class="fa fa-fw fa-user "style="font-size:26px"></i>
+                            
+                                  <!--<i class="fa fa-caret-down"></i>-->
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">My Profile</a>
+                            <a href="#">News</a>
+                            <a href="#">My Playlisyt</a>
+                        </div>
+                    </div>
+
+                    <div class="imageLogo">
+                        <img src="./images/artist/charlie.jpg" alt="user">
+                    </div>
+                </div>
+                <!--</div>-->
+            </div>
+
+
+        </div>
+
+    </header>
+    <!--Queue Container, which will contain the list of songs
+        that are being played by the user later on each song 
+        will be given an id tag which can be used to play the 
+        song directly by clicking on it. Instead of making a play and pause button. I would add onclick event on it
+        to play the song-->
+    <div class="queueContainer">
+        <div class="queueBox">
+            <div class="open_multiple">
+                <div class="item_list">
+                    <input type="checkbox" id="chck1">
+                    <label class="items" for="chck1">Queue </label>
+                    <div class="description">Song 1</div>
+                    <div class="description">Song 2</div>
+                    <div class="description">Song 3</div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <!--End of Queue Conytainer-->
+
+    <!--Main Section of the Webpage-->
+
+    <main>
+
+        <!--Left Section of the Webpage Starts Here -->
+
+        <div class="leftside">
+
+            <!--Top Best Songs Section  Starts Here -->
+
+            <div class="bestContainer">
+                <div class="title">
+                    <h3>Best</h3>
+                </div>
+                <div class="best">
+                    <div class="firstBest">
+                        <img src="images/firstBest.jpg" alt="firstBest">
+                    </div>
+                    <div class="secondBest">
+                        <img src="images/secondBest.jpg" alt="secontBest">
+                    </div>
+                    <div class="thirdBest">
+                        <img src="images/thirdBest.jpg" alt="thirdBest">
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Top Best Songs Section Ends Here -->
+
+            <!--Latest Release Songs Section  Starts Here -->
+
+            <div class="LatestRelease">
+                <div class="title">
+                    <h3>Latest Release</h3>
+                </div>
+                <div class="LatestReleaseContainer">
+                    <div class="latest">
+                        <div class="latesetimg"></div>
+                        <div class="latesetcontent">
+                            <h3>Latest Hit Song Name<br>
+                                <h5>Artist Name</h5>
+                            </h3>
+                            <h5>Aug 11, 2017</h5>
+                        </div>
+                        <div class="latesetmenu">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="latest">
+                        <div class="latesetimg"></div>
+                        <div class="latesetcontent">
+                            <h3>Latest Hit Song Name<br>
+                                <h5>Artist Name</h5>
+                            </h3>
+                            <h5>Aug 11, 2017</h5>
+                        </div>
+                        <div class="latesetmenu">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="latest">
+                        <div class="latesetimg"></div>
+                        <div class="latesetcontent">
+                            <h3>Latest Hit Song Name<br>
+                                <h5>Artist Name</h5>
+                            </h3>
+                            <h5>Aug 11, 2017</h5>
+                        </div>
+                        <div class="latesetmenu">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="latest">
+                        <div class="latesetimg"></div>
+                        <div class="latesetcontent">
+                            <h3>Latest Hit Song Name<br>
+                                <h5>Artist Name</h5>
+                            </h3>
+                            <h5>Aug 11, 2017</h5>
+                        </div>
+                        <div class="latesetmenu">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Latest Release Songs Section Ends Here -->
+
+            <!--Artist Section Strats Here -->
+
+            <div class="popularArtist">
+                <div class="title">
+                    <h3>Popular Artist</h3>
+                </div>
+                <div class="popularArtistContainer">
+                    <div class="artistbox1">
+                        <div class="artistimage">
+                            <a href="images/artist/coldplay.html"><img src="images/artist/ed1.jpg" alt="Ed Sheeran"></a>
+                        </div>
+                        <div class="artistname">
+                            <h5>Ed Sheeran </h5>
+                        </div>
+                    </div>
+
+                    <div class="artistbox2">
+                        <div class="artistimage">
+                            <a href="images/artist/coldplay.html"><img src="images/artist/cp1.jpg" alt="Ed Sheeran"></a>
+                        </div>
+                        <div class="artistname">
+                            <h5>Cold Play</h5>
+                        </div>
+                    </div>
+
+                    <div class="artistbox3">
+                        <div class="artistimage">
+                            <a href="images/artist/coldplay.html">
+                                <img src="images/artist/z1.jpg" alt="Ed Sheeran">
+                            </a>
+                        </div>
+                        <div class="artistname">
+                            <h5>Zyan</h5>
+                        </div>
+                    </div>
+
+                    <div class="artistbox4">
+                        <div class="artistimage">
+                            <a href="images/artist/coldplay.html">
+                                <img src="images/artist/charlie.jpg" alt="charlie">
+                            </a>
+                        </div>
+                        <div class="artistname">
+                            <h5>Charlie Puth </h5>
+                        </div>
+                    </div>
+
+                    <div class="artistbox5">
+                        <div class="artistimage">
+                            <a href="images/artist/coldplay.html">
+                                <img src="images/artist/imagineDragons.jpg" alt="imagineDragons">
+                            </a>
+                        </div>
+                        <div class="artistname">
+                            <h5>Imagine Dragon</h5>
+                        </div>
+                    </div>
+
+                    <div class="artistbox6">
+                        <div class="artistimage">
+                            <a href="images/artist/coldplay.html">
+                                <img src="images/artist/brunoMars.jpg" alt="brunoMars">
+                            </a>
+                        </div>
+                        <div class="artistname">
+                            <h5>Bruno Mars</h5>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Artist Section Ends  Here -->
+
+            <!--Radio Section Starts  Here -->
+
+            <div class="radioContainer">
+                <div class="radioBox">
+                    <div class="subsection">
+                        <div class="radioStationList">
+                            <img src="images/radioStation/radioStationList.jpg" width="120px" height="120px">
+                        </div>
+
+                        <div class="loveStation">
+                            <img src="images/radioStation/Love.jpg" width="120px" height="120px">
+                        </div>
+
+                        <div class="retroStation">
+                            <img src="images/radioStation/retro.jpg" width="120px" height="120px">
+                        </div>
+
+                        <div class="chillStationList">
+                            <img src="images/radioStation/chill.jpg" width="120px" height="120px">
+                        </div>
+
+                        <div class="workoutStationList">
+                            <img src="images/radioStation/workout.jpg" width="120px" height="120px">
+                        </div>
+
+                        <div class="rockStationList">
+                            <img src="images/radioStation/rock.jpg" width="120px" height="120px">
+                        </div>
+
+                        <div class="popStationList">
+                            <img src="images/radioStation/pop.jpg" width="120px" height="120px">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--Radio Section Ends  Here -->
+
+            <!--Collection Section Starts  Here -->
+            <div class="collection">
+                <div class="collectionContainer">
+                    <div class="partyCollection1">
+
+                        <img src="images/collections/partyCollection.jpg">
+                        <div class="overlay">Party</div>
+                    </div>
+
+                    <div class="partyCollection2">
+                        <img src="images/collections/electricCollection.jpg">
+                        <div class="overlay">Electric</div>
+                    </div>
+
+                    <div class="partyCollection3">
+                        <img src="images/collections/roadtripCollection.jpg">
+                        <div class="overlay">RoadTrip</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Collection Section Ends  Here -->
+
+            <!-- English Song Collection Section Strats  Here -->
+            <div class="popularEnglish">
+                <div class="title">
+                    <h3>Latest English</h3>
+                </div>
+                <div class="popularEnglishContainer">
+                    <div class="englishbox1">
+                        <div class="englsihimage">
+                            <img src="images/english/1.jpg">
+                        </div>
+                        <div class="engname">
+                            <h5>Friends</h5>
+                            <h6>Dasu</h6>
+                        </div>
+                    </div>
+
+                    <div class="englishbox2">
+                        <div class="englsihimage">
+                            <img src="images/english/2.jpg">
+                        </div>
+                        <div class="engname">
+                            <h5>Chris</h5>
+                            <h6>Brown</h6>
+                        </div>
+                    </div>
+
+                    <div class="englishbox3">
+                        <div class="englsihimage">
+                            <img src="images/english/3.jpg">
+                        </div>
+                        <div class="engname">
+                            <h5>Beleive</h5>
+                            <h6>Artist</h6>
+                        </div>
+                    </div>
+
+                    <div class="englishbox4">
+                        <div class="englsihimage">
+                            <img src="images/english/4.jpg">
+                        </div>
+                        <div class="engname">
+                            <h5>Miley</h5>
+                            <h6>Cyrus</h6>
+                        </div>
+                    </div>
+
+                    <div class="englishbox5">
+                        <div class="englsihimage">
+                            <img src="images/english/5.jpg">
+                        </div>
+                        <div class="engname">
+                            <h5>Despacito</h5>
+                            <h6>Desc</h6>
+                        </div>
+                    </div>
+
+                    <div class="englishbox6">
+                        <div class="englsihimage">
+                            <img src="images/english/6.jpg">
+                        </div>
+                        <div class="engname">
+                            <h5>English Song </h5>
+                            <h6>Artist</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- English Song Collection Section Ends  Here -->
+
+            <!-- Hindi Song Collection Section Strats  Here -->
+            <div class="popularHindi">
+                <div class="title">
+                    <h3>Latest Hindi</h3>
+                </div>
+                <div class="popularHindiContainer">
+                    <div class="Hindibox1">
+                        <div class="hindiimage">
+                            <img src="images/hindi/1.jpg">
+                        </div>
+                        <div class="hindiname">
+                            <h5>Name </h5>
+                            <h6>Artist</h6>
+                        </div>
+                    </div>
+
+                    <div class="Hindibox2">
+                        <div class="hindiimage">
+                            <img src="images/hindi/2.png">
+                        </div>
+                        <div class="hindiname">
+                            <h5>Name </h5>
+                            <h6>Artist</h6>
+                        </div>
+                    </div>
+
+                    <div class="Hindibox3">
+                        <div class="hindiimage">
+                            <img src="images/hindi/3.jpg">
+                        </div>
+                        <div class="hindiname">
+                            <h5>Name </h5>
+                            <h6>Artist</h6>
+                        </div>
+                    </div>
+
+                    <div class="Hindibox4">
+                        <div class="hindiimage">
+                            <img src="images/hindi/4.png">
+                        </div>
+                        <div class="hindiname">
+                            <h5>Name </h5>
+                            <h6>Artist</h6>
+                        </div>
+                    </div>
+
+                    <div class="Hindibox5">
+                        <div class="hindiimage">
+                            <img src="images/hindi/5.jpg">
+                        </div>
+                        <div class="hindiname">
+                            <h5>Name </h5>
+                            <h6>Artist</h6>
+                        </div>
+                    </div>
+
+                    <div class="Hindibox6">
+                        <div class="hindiimage">
+                            <img src="images/hindi/6.jpg">
+                        </div>
+                        <div class="hindiname">
+                            <h5>Name </h5>
+                            <h6>Artist</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Hindi Song Collection Section Ends  Here -->
+        </div>
+
+        <!--End of Left side-->
+
+        <!--Right side of the main part which will contain the song queue list -->
+
+        <div class="rightside">
+            <div class="title">
+                <h3>Queue</h3>
+            </div>
+            <div class="queueContainer">
+                <div class="songqueue">
+                    <div id="numberCount">1</div>
+                    <div id="songImage">
+                        <img src="images/artist/brunoMars.jpg">
+                    </div>
+                    <div id="songcontent">
+                        <h4>Song Name</h4>
+                        <h6>Artist</h6>
+                    </div>
+                    <div id="songbutton">
+                        <button class='button play'></button>
+                        <button class='button pause'></button>
+                    </div>
+                </div>
+
+                <div class="songqueue">
+                    <div id="numberCount">2</div>
+                    <div id="songImage">
+                        <img src="images/artist/charlie.jpg">
+                    </div>
+                    <div id="songcontent">
+                        <h4>Song Name</h4>
+                        <h6>Artist</h6>
+                    </div>
+                    <div id="songbutton">
+                        <button class='button play'></button>
+                        <button class='button pause'></button>
+                    </div>
+                </div>
+
+                <div class="songqueue">
+                    <div id="numberCount">3</div>
+                    <div id="songImage">
+                        <img src="images/artist/brunoMars.jpg">
+                    </div>
+                    <div id="songcontent">
+                        <h4>Song Name</h4>
+                        <h6>Artist</h6>
+                    </div>
+                    <div id="songbutton">
+                        <button class='button play'></button>
+                        <button class='button pause'></button>
+                    </div>
+                </div>
+
+                <div class="songqueue">
+                    <div id="numberCount">4</div>
+                    <div id="songImage">
+                        <img src="images/artist/charlie.jpg">
+                    </div>
+                    <div id="songcontent">
+                        <h4>Song Name</h4>
+                        <h6>Artist</h6>
+                    </div>
+                    <div id="songbutton">
+                        <button class='button play'></button>
+                        <button class='button pause'></button>
+                    </div>
+                </div>
+
+                <div class="songqueue">
+                    <div id="numberCount">5</div>
+                    <div id="songImage">
+                        <img src="images/artist/brunoMars.jpg">
+                    </div>
+                    <div id="songcontent">
+                        <h4>Song Name</h4>
+                        <h6>Artist</h6>
+                    </div>
+                    <div id="songbutton">
+                        <button class='button play'></button>
+                        <button class='button pause'></button>
+                    </div>
+                </div>
+
+                <div class="songqueue">
+                    <div id="numberCount">6</div>
+                    <div id="songImage">
+                        <img src="images/artist/charlie.jpg">
+                    </div>
+                    <div id="songcontent">
+                        <h4>Song Name</h4>
+                        <h6>Artist</h6>
+                    </div>
+                    <div id="songbutton">
+                        <button class='button play'></button>
+                        <button class='button pause'></button>
+                    </div>
+                </div>
+
+                <div class="songqueue">
+                    <div id="numberCount">7</div>
+                    <div id="songImage">
+                        <img src="images/artist/brunoMars.jpg">
+                    </div>
+                    <div id="songcontent">
+                        <h4>Song Name</h4>
+                        <h6>Artist</h6>
+                    </div>
+                    <div id="songbutton">
+                        <button class='button play'></button>
+                        <button class='button pause'></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--End of Right Side -->
+    </main>
+
+    <!--End of main Section -->
+
+
+    <!--THE footer section strats here : This section will be contain the song which is currently
+        played and user can control the song using different buutons like play, pause, forward
+        rewind, share and volume control. A prgress bar which shows the time line of currently
+        played song-->
+
+    <footer>
+        <div class="footerContainer">
+            <div class="songDetails">
+                <!--Detail Section for song image and song name and artist name-->
+                <div class="songimage">
+                    <img src="images/hindi/1.jpg">
+                </div>
+                <div class="songContentDetails">
+                    <h4>Song Name</h4>
+                    <h6>Artist</h6>
+                </div>
+            </div>
+
+            <!--Details section where user can control the song by using differnt buttons.-->
+            <div class="playingDetails">
+                <i class="fa fa-forward fa-flip-horizontal"></i>
+                <i class="fa fa-play"></i>
+                <i class="fa fa-forward"></i>
+                <i class="fa fa-random" style=""></i>
+                <i class="fa fa-redo"></i>
+                <i class="fa fa-share-alt"></i>
+                <i class="fa fa-volume-up"></i>
+            </div>
+
+            <!--Timeline of currently playing song-->
+            <div class="controlSong">
+                <div class="rangeslider">
+                    <input type="range" min="1" max="100" value="10" class="myslider" id="sliderRange">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--End of footer section-->
+
+</body>
+<!--End of Body Section-->
+
+</html>
+
+<!--HTML code ends here-->
